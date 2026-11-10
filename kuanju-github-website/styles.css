@@ -1,0 +1,68 @@
+/* Academic website adapted for GitHub Pages. Edit the variables to refine colors. */
+:root {
+  --sidebar: #34434b;
+  --sidebar-text: #f5f7f8;
+  --sidebar-muted: #cbd3d7;
+  --ink: #272e33;
+  --muted: #616d73;
+  --link: #315b82;
+  --line: #e3e7e9;
+  --surface: #ffffff;
+  --sidebar-width: 232px;
+}
+* {box-sizing: border-box}
+html {scroll-behavior: smooth}
+body {margin:0;background:var(--surface);color:var(--ink);font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:1.72;-webkit-font-smoothing:antialiased}
+a {color:var(--link);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover {color:#193c5b}
+a:focus-visible, button:focus-visible {outline:2px solid #76a9d4;outline-offset:4px}
+.skip-link {position:absolute;left:-999px;top:0;z-index:40;padding:10px 15px;background:white}
+.skip-link:focus {left:12px;top:12px}
+.sidebar {width:var(--sidebar-width);height:100vh;position:fixed;inset:0 auto 0 0;background:var(--sidebar);color:var(--sidebar-text);padding:90px 26px 36px 35px;display:flex;flex-direction:column;z-index:20}
+.sidebar-nav {display:flex;flex-direction:column;gap:5px}
+.sidebar-nav a {display:block;padding:10px 10px 10px 13px;border-left:3px solid transparent;color:var(--sidebar-muted);font-size:15px;letter-spacing:.01em;text-decoration:none;transition:background .16s,color .16s}
+.sidebar-nav a:hover {background:rgba(255,255,255,.07);color:#fff}
+.sidebar-nav a[aria-current="page"] {border-color:#ebf0f3;color:white;font-weight:600;background:rgba(255,255,255,.055)}
+.sidebar-bottom {margin-top:auto;color:#aebcc2;font-size:12px;letter-spacing:.025em;padding-left:13px}
+.content {margin-left:var(--sidebar-width);min-height:100vh}
+.page {max-width:1060px;padding:112px 76px 100px;margin:0 auto}
+.page-home {padding-top:135px}
+.heading {font-family:Arial, Helvetica, sans-serif;font-size:42px;line-height:1.19;font-weight:500;letter-spacing:-.025em;margin:0 0 10px;color:#25343e}
+.chinese-name {font-size:23px;color:var(--muted);letter-spacing:.06em;margin:0 0 37px}
+.home-grid {display:grid;grid-template-columns:minmax(0,1.6fr) minmax(220px,.9fr);gap:58px;align-items:start}
+.bio {max-width:615px}
+.bio p {margin:0 0 19px}
+.bio .cv-line {margin-top:26px}
+.photo-shell {position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;max-width:335px;background:#edf0f1;border:1px solid #e1e6e8}
+.photo-shell::before {content:"KT";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:76px;color:#a6b2b8;font-weight:300;letter-spacing:.07em}
+.photo-shell img {display:block;position:relative;width:100%;height:100%;object-fit:cover;object-position:center;z-index:1;background:#edf0f1}
+.page-title {font-weight:500;letter-spacing:-.02em;font-size:35px;line-height:1.2;margin:0 0 42px;color:#25343e}
+.section-title {font-size:23px;line-height:1.3;font-weight:500;margin:0 0 25px;color:#263741}
+.research-item {margin-bottom:39px;max-width:880px}
+.research-item h3 {font-size:17px;line-height:1.5;font-weight:600;margin:0 0 4px}
+.research-item h3 a {font-weight:600}
+.research-item .coauthors {font-size:15px;color:#505b61;margin:0 0 11px}
+.research-item .abstract {font-size:15px;line-height:1.72;margin:0;color:#343c42}
+.research-section+.research-section {padding-top:18px}
+.paper-link {font-weight:400;font-size:15px;white-space:nowrap}
+.contact-block {font-size:17px;line-height:1.85}
+.contact-block p {margin:0 0 21px}
+.contact-block .emails a {display:block;width:fit-content}
+.footer {font-size:12px;color:#899196;margin-top:84px;border-top:1px solid var(--line);padding-top:20px}
+.mobile-header {display:none}
+@media(max-width:1050px){.page{padding-left:53px;padding-right:50px}.home-grid{gap:33px}}
+@media(max-width:760px){
+  :root{--sidebar-width:0px}
+  .sidebar{display:none;position:static;width:100%;height:auto;padding:0}
+  .sidebar.is-open{display:flex;position:absolute;top:64px;left:0;right:0;padding:17px 18px 22px;box-shadow:0 10px 20px rgba(0,0,0,.16)}
+  .sidebar-bottom{display:none}
+  .mobile-header{display:flex;position:sticky;top:0;background:var(--sidebar);color:white;height:64px;align-items:center;justify-content:space-between;padding:0 22px;z-index:30}
+  .mobile-header .mobile-label{font-size:15px;font-weight:600}
+  .menu-button{font:inherit;color:white;background:transparent;border:1px solid rgba(255,255,255,.45);border-radius:3px;padding:5px 12px;cursor:pointer}
+  .content{margin-left:0}.page{padding:60px 26px 75px}.page-home{padding-top:70px}
+  .home-grid{grid-template-columns:1fr;gap:28px}.photo-shell{width:230px;max-width:100%;aspect-ratio:4/5}
+  .heading{font-size:35px}.chinese-name{font-size:19px;margin-bottom:28px}
+  .page-title{font-size:31px;margin-bottom:30px}
+  .research-item{margin-bottom:32px}.paper-link{white-space:normal}
+}
+@media print {.sidebar,.mobile-header{display:none}.content{margin:0}.page{padding:10px 20px}a{color:inherit}}
