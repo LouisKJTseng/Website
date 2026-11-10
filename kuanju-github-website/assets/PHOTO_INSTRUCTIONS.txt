@@ -1,4 +1,0 @@
-Add your original Google Sites portrait photo to this folder and name it profile.jpg.
-This will make the site fully independent of Google Sites. Until then, the template
-attempts to load the old Google Sites picture and falls back to initials if blocked.
-The public Google Sites image could not be retrieved as an independent file.
