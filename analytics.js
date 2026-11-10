@@ -1,6 +1,6 @@
 // Add the Measurement ID (G-XXXXXXXXXX) of your EXISTING Google Analytics 4
 // web data stream here. Using the same stream keeps your analytics history together.
-const GA_MEASUREMENT_ID = '';
+const GA_MEASUREMENT_ID = 'G-BFQMDGHEEQ';
 if (/^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID)) {
   window.dataLayer = window.dataLayer || [];
   function gtag(){ window.dataLayer.push(arguments); }
