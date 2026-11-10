@@ -1,21 +1,27 @@
-# Kuan-Ju (Louis) Tseng — GitHub Pages website
+# Kuan-Ju (Louis) Tseng — Academic Website
 
-Publish at https://louiskjtseng.github.io/Website/.
+This repository publishes the website at https://louiskjtseng.github.io/Website/.
 
-## Upload instructions
-Upload **the contents of this folder** to the `main` branch at the repository root (not into a nested folder). Replace the existing root `README.md`. Keep the existing four PDF files intact.
+## Structure
 
-GitHub Pages: Settings → Pages → Deploy from a branch → `main` → `/(root)`.
+- `index.html` — Home, academic biography, portrait, and CV link
+- `research/index.html` — Research papers and ongoing projects
+- `contact/index.html` — Contact details
+- `styles.css` — Typography, layout, and sidebar
+- `script.js` — Mobile navigation and image fallback
+- `analytics.js` — Google Analytics (enter your existing GA4 Measurement ID)
+- `sitemap.xml`, `robots.txt` — Search-engine discovery
+- `*.pdf` — CV and working paper PDFs, retained at the repository root
 
-Website structure:
-- `index.html`: Home, biography, portrait and CV link
-- `research/index.html`: Research
-- `contact/index.html`: Contact
-- `assets/profile.jpg`: original portrait
-- `styles.css`, `script.js`: styling and mobile menu
-- `analytics.js`: Google Analytics (configure the existing GA4 Measurement ID)
-- `sitemap.xml`, `robots.txt`: search-engine discovery
+The previous duplicate `kuanju-github-website/` directory has been removed.
 
-The old `kuanju-github-website/` directory can be deleted from the repository after deployment is confirmed, since the website is now rooted at `/`.
+## GitHub Pages
 
-Use your original GA4 web data stream's measurement ID in `analytics.js` to keep reports under your existing property. Your published Google Sites website should retain a link to the new URL while Google indexes the new site.
+Select **Settings → Pages → Deploy from a branch**, branch `main`, folder `/(root)`.
+
+## Remaining setup
+
+1. Add the original profile photo as `assets/profile.jpg` to serve it locally rather than use the Google Sites image fallback.
+2. Enter your existing GA4 Measurement ID into `analytics.js` to keep analytics history with the same GA4 property.
+3. Verify GitHub Pages deployment, add the GitHub Pages URL to Google Search Console, and submit `sitemap.xml`.
+4. Keep a link from the old Google Sites page to the new website during the migration.
