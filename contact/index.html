@@ -7,7 +7,120 @@
 <meta name="description" content="Contact Kuan-Ju (Louis) Tseng at Princeton University.">
 <meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://louiskjtseng.github.io/Website/contact/">
-<link rel="stylesheet" href="../styles.css">
+<!-- Embedded stylesheet prevents an old cached GitHub Pages CSS file from breaking this page. -->
+<style>
+/* Google Sites-inspired academic website — black navigation, white pages. */
+:root {
+  --sidebar:#000; --text:#242424; --muted:#4b4b4b; --link:#09749b;
+  --band:#f2f2f2; --line:#999; --sidebar-width:210px;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:#fff; color:var(--text); font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+a { color:var(--link); text-underline-offset:2px; }
+a:hover { color:#075371; }
+a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid #217f9e; outline-offset:4px; }
+.skip-link { position:absolute; left:-9999px; z-index:50; top:0; background:white; padding:10px 14px; }
+.skip-link:focus { left:12px; top:12px; }
+.sidebar { position:fixed; inset:0 auto 0 0; z-index:25; width:var(--sidebar-width); min-height:100vh; background:var(--sidebar); padding:38px 24px 25px 34px; }
+.sidebar-nav { display:flex; flex-direction:column; gap:0; }
+.sidebar-nav a { display:block; padding:10px 0; color:#fff; font-size:13px; font-weight:400; text-decoration:none; }
+.sidebar-nav a:hover { text-decoration:underline; }
+.sidebar-nav a[aria-current="page"] { color:#fff; }
+.content { margin-left:var(--sidebar-width); min-height:100vh; }
+.mobile-header { display:none; }
+
+/* Home */
+.page-home { max-width:1100px; padding:66px 60px 120px; margin:0 auto; }
+.home-title { margin:0; font-weight:300; font-size:43px; line-height:1.25; letter-spacing:.005em; color:#4a626e; }
+.chinese-name { margin:12px 0 0; font-family:Georgia,"Noto Serif TC",serif; font-size:22px; line-height:1.5; letter-spacing:.04em; color:#222; }
+.home-grid { display:grid; grid-template-columns:minmax(0,575px) 300px; gap:70px; align-items:start; margin-top:110px; }
+.bio { padding-top:6px; font-size:14px; line-height:1.48; }
+.bio p { margin:0 0 15px; }
+.bio .bio-single { white-space:nowrap; }
+.bio .bio-wrap { white-space:normal; }
+.bio .cv-line { margin-top:9px; }
+.portrait { margin:0; width:300px; }
+.portrait img { width:100%; height:auto; display:block; }
+
+/* Research */
+.research-page { padding:0 0 110px; }
+.research-page-title { text-align:center; font-size:36px; font-weight:600; line-height:1.25; margin:0; padding:32px 10px 35px; }
+.section-band { background:var(--band); padding:24px 22px; }
+.section-band h2 { max-width:965px; margin:0 auto; font-size:22px; font-weight:500; line-height:1.6; }
+.paper-list { max-width:965px; margin:0 auto; }
+.paper-entry { border-bottom:1px solid var(--line); font-family:Georgia,"Times New Roman",serif; }
+.paper-entry:last-child { margin-bottom:20px; }
+.paper-summary { display:flex; justify-content:space-between; align-items:center; gap:35px; list-style:none; cursor:pointer; padding:31px 10px 16px 6px; }
+.paper-summary::-webkit-details-marker { display:none; }
+.paper-summary::marker { content:""; }
+.paper-summary-text { display:block; min-width:0; flex:1; }
+.paper-title { display:block; font-size:14px; font-weight:400; line-height:1.5; }
+.paper-title a { color:var(--link); text-decoration:underline; }
+.paper-links { white-space:normal; }
+.paper-coauthors { display:block; font-size:12px; line-height:1.5; margin-top:10px; color:#333; }
+.paper-chevron { width:10px; height:10px; border-right:1.6px solid #666; border-bottom:1.6px solid #666; transform:rotate(45deg); flex-shrink:0; margin-right:2px; margin-top:-7px; transition:transform .18s; }
+.paper-entry[open] .paper-chevron { transform:rotate(225deg); margin-top:3px; }
+.paper-abstract { padding:0 55px 23px 6px; }
+.paper-abstract p { margin:9px 0 0; color:#333; font-size:14px; line-height:1.75; }
+.forthcoming { margin-left:9px; white-space:nowrap; }
+.wip-entry { padding:31px 6px 5px; font-family:Georgia,"Times New Roman",serif; }
+.wip-entry h3 { font-size:14px; font-weight:400; margin:0; }
+.wip-entry p { font-size:12px; margin:13px 0 0; }
+
+/* Contact */
+.contact-page { max-width:1080px; margin:auto; padding:100px 60px 120px; }
+.contact-title { font-size:36px; font-weight:500; margin:0 0 52px; }
+.contact-block { font-size:15px; line-height:1.9; }
+.contact-block p { margin:0 0 18px; }
+.emails a { display:block; width:fit-content; }
+
+/* Smaller screens */
+@media (max-width:1400px) {
+  .page-home { padding-left:45px; padding-right:45px; }
+  .home-grid { grid-template-columns:minmax(0,1fr) 260px; gap:35px; }
+  .bio .bio-single { white-space:normal; }
+  .portrait { width:260px; }
+  .section-band h2,.paper-list { max-width:min(965px, calc(100% - 64px)); }
+}
+@media (max-width:980px) {
+  .home-grid { grid-template-columns:minmax(0,1fr) 220px; gap:25px; margin-top:65px; }
+  .portrait { width:220px; }
+  .home-title { font-size:36px; }
+  .page-home { padding-top:56px; }
+}
+@media (max-width:760px) {
+  :root { --sidebar-width:0px; }
+  .mobile-header { display:flex; position:sticky; top:0; z-index:35; height:58px; align-items:center; justify-content:space-between; color:white; background:#000; padding:0 19px; font-size:14px; }
+  .menu-button { font:inherit; color:#fff; border:1px solid #888; background:transparent; padding:4px 12px; border-radius:2px; cursor:pointer; }
+  .sidebar { display:none; position:fixed; top:58px; bottom:auto; height:auto; min-height:0; width:100%; padding:11px 22px 17px; box-shadow:0 8px 12px #0003; }
+  .sidebar.is-open { display:block; }
+  .sidebar-nav a { padding:10px 0; }
+  .content { margin-left:0; }
+  .page-home { padding:48px 25px 75px; }
+  .home-title { font-size:35px; }
+  .chinese-name { font-size:20px; }
+  .home-grid { display:flex; flex-direction:column; gap:30px; margin-top:50px; }
+  .bio { font-size:14px; padding:0; }
+  .portrait { width:min(300px,100%); }
+  .research-page-title { font-size:31px; padding:32px 10px; }
+  .section-band { padding:19px 24px; }
+  .section-band h2 { max-width:none; font-size:21px; }
+  .paper-list { max-width:none; margin:0 24px; }
+  .paper-summary { padding:26px 3px 18px; gap:14px; }
+  .paper-title { font-size:14px; }
+  .paper-coauthors { font-size:12px; }
+  .paper-abstract { padding-right:12px; }
+  .forthcoming { white-space:normal; }
+  .contact-page { padding:60px 25px; }
+}
+@media print {
+  .sidebar,.mobile-header { display:none; }
+  .content { margin-left:0; }
+  .paper-entry:not([open]) .paper-abstract { display:block; }
+}
+
+</style>
 <script defer src="../script.js"></script>
 <script defer src="../analytics.js"></script>
 </head>
